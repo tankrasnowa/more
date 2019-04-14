@@ -1,0 +1,468 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+	cursor: pointer;
+}
+li{
+    list-style: none;
+}
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1145px;
+}
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.header_wrapper{
+    padding-top: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header_btn{
+    padding: 15px 0;
+    width: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.line{
+    height: 2px;
+    background-color:#0d3351;
+    display: block;
+    margin:  auto;
+    position: relative;
+    width: 100%;
+}
+
+.line:before, .line:after{
+    content: "";
+    height: 2px;
+    background-color:#0d3351;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    transition: .3s;
+}
+.line:before{
+    top: -8px;
+}
+.line:after{
+    bottom: -8px;
+}
+
+.header_btn.active .line{
+    background: none;
+}
+
+.header_btn.active .line:before{
+    transform-origin: left top;
+    transform: rotate(45deg) translateX(-3px);
+
+}
+.header_btn.active .line:after{
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translateX(-3px);
+}
+
+
+.header_btn_block{
+	background-color:#0d3351;
+	padding:73px 125px 83px 44px;
+    display: none;
+}
+.header_btn_block.active{
+    display: inline-block;
+}
+
+.header_btn_list{
+	font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.67;
+  text-align: left;
+  color: white;
+}
+
+
+.header_left{
+    display: flex;
+    align-items: center;
+}
+.header_left_link{
+    display:inline-block;
+    margin-right: 27px;
+    font-family: Raleway,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: center;
+    color: #0d3351;
+}
+.header_left_icon{
+    margin-right: 8px;
+}
+.header_left_contact, .footer_contact{
+    font-family: Raleway,sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    color: #0d3351;
+}
+.header_left_tel, .footer_contact_tel{
+    font-size: 14px;
+}
+.intro{
+    width: 100%;
+    background: url("./img/sochi/sochi-2258855.png") center no-repeat;
+    background-size: cover;
+}
+.intro_inner{
+    margin: 0 auto;
+    padding-top: 85px;
+}
+.intro_inner_logo{
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    max-width: 100%;
+    height: auto;
+}
+.intro_subtitle, .content_subtitle{
+    font-family: 'Roboto Slab', serif;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    text-align: center;
+    color: #0d3351;
+    padding-bottom: 35px;
+}
+.intro_title{
+    font-family: 'Roboto Slab', serif;
+    font-size: 100px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.48;
+    letter-spacing: -2.5px;
+    text-align: center;
+    color: #0d3351;
+    text-transform: uppercase;
+    padding-bottom: 57px;
+}
+.intro_btn_wrapper{
+    padding-bottom: 196px;
+}
+.btn{
+    border: none;
+    background-color: #33c7fd;
+    width: 202px;
+    display: block;
+    margin: 0 auto;
+}
+.btn_text{
+    font-family: Raleway,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 3.43;
+    color:white;
+}
+.content_line{
+    display: block;
+    margin: -179px auto 0;
+    max-width: 100%;
+    height: auto;
+
+}
+.content_title{
+    padding-bottom: 42px;
+}
+.content_subtitle{
+    padding-bottom: 11px;
+}
+.content_filter, .content_filter_price{
+    font-family: Raleway,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    text-align: center;
+    color: #0d3351;
+}
+.content_filter_price{
+    font-style: italic;
+}
+.content_filter_btn{
+    height: 14px;
+    width: 11px;
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+}
+.content_card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card_block{
+    background-color: white;
+    margin-bottom: 21px;
+}
+.card_block_img{
+    max-width: 100%;
+    height: auto;
+}
+.card_block_content_article{
+    margin: 34px 40px;
+}
+.card_block_content_title{
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: left;
+    color:#00a2dd;
+
+}
+.card_block_content_text{
+    width: 344px;
+    height: 39px;
+    font-family: Raleway,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    text-align: left;
+    color: #0d3351;
+    padding-bottom: 22px;
+
+}
+.card_block_text_bold{
+    font-weight: bold;
+
+}
+.card_block_text_cost{
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.6;
+    text-align: center;
+    color: #0d3351;
+    display: flex;
+    justify-content: flex-start;
+}
+.card_block_text_cost_sale{
+    opacity: 0.55;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.67;
+    text-align: center;
+    color: rgba(13, 51, 81, 0.55);
+    padding-left: 32px;
+    text-decoration: line-through;
+}
+
+.footer, .footer_contact_company{
+    margin-top: 62px;
+    background-color: #ffffff;
+    font-family: Raleway,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    text-align: left;
+    color: #0d3351;
+}
+.footer_wrapper{
+    padding-bottom: 39px;
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_social_icon{
+    padding-top: 10px;
+    display: flex;
+}
+.footer_socials_bg{
+    width: 30px;
+    height: 30px;
+    background-color: #0d3351;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_block{
+    position: relative;
+}
+.sale{
+    width: 90px;
+    height: 101px;
+    position: absolute;
+    top:-7px;
+    left:420px;
+	background: url("./img/bookmark.png") center no-repeat;
+}
+.sale_text{
+	padding: 31px 15px 41px 15px;
+	font-family:Raleway,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    text-align: center;
+    color:white;
+}
+
+@media (max-width: 1200px) {
+    .header_wrapper, .footer_wrapper{
+        padding-left:  210px;
+        padding-right:  210px;
+    }
+    .intro_title{
+        font-size: 72px;
+        line-height: 0.48;
+        letter-spacing: -2.5px;
+    }
+    .intro_subtitle{
+        font-size: 26px;
+        line-height: 1.85;
+    }
+    .intro_inner_logo{
+        padding-top: 100px;
+        max-width: 50px;
+    }
+    .content_line{
+        max-width: 45px;
+    }
+    .content_subtitle{
+        font-size: 26px;
+        line-height: 1.85;
+        padding-bottom: 0;
+    }
+    .card_block {
+        width: 100%;
+        max-width: 345px;
+    }
+    .sale{
+        left: 224px;
+    }
+    .content_card{
+        padding: 0 210px;
+        justify-content: space-between;
+    }
+
+}
+
+
+@media (max-width: 320px) {
+    .header_wrapper, .footer_wrapper{
+        padding-left:  15px;
+        padding-right:  15px;
+    }
+    .header_left{
+        display: none;
+    }
+    .intro_inner{
+        padding: 0;
+    }
+    .intro_title{
+        font-size: 50px;
+        line-height: 0.96;
+        letter-spacing: -1.3px;
+    }
+    .intro_subtitle{
+        font-size: 20px;
+        line-height: 2.4;
+    }
+    .intro_inner_logo{
+        padding-top: 36px;
+        max-width: 50px;
+    }
+    .content_line{
+        max-width: 45px;
+    }
+    .content_subtitle{
+        font-size: 26px;
+        line-height: 1.85;
+        padding-bottom: 0;
+    }
+    .sale{
+        left: 178px;
+    }
+    .content_card{
+        padding: 0 15px;
+    }
+    .footer_left{
+        display: none;
+    }
+    .footer_wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_contact{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card_block_text_cost{
+        display: block;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
